@@ -22,6 +22,7 @@ The template is structured in the following way:
 
 ## :gear: Compilation
 
+### :penguin: Linux
 <b>See [this fork](https://github.com/colai2zo/tex-course-index-template) for a compilation script (see [`src/compile.sh`](https://raw.githubusercontent.com/colai2zo/tex-course-index-template/main/src/compile.sh)) if you want to compile from your terminal.</b>
 
 The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org/wiki/Texmaker) by defining a *Quick Build Command*:
@@ -34,6 +35,26 @@ The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org
        makeindex %.idx -s lib/std.ist|pdflatex -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf|cp %.idx %.idx.bak|rm %.ilg %.ind %.aux %.synctex.gz
 
 5. Then click *OK*
+
+### :window: Windows
+
+<b>Prerequisite</b>
+Install [TeX Live](https://tug.org/texlive/windows.html#install) for Windows. 
+
+May be also able to do this installing [MiKTeX](https://miktex.org/download), but I have not tested this setup. 
+
+
+The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org/wiki/Texmaker) by defining a *Quick Build Command*:
+
+1. Go to the menu *Options*
+2. Select *Configure Texmaker*
+3. Go to tab *Quick Build*
+4. In the field *User : (...)*, replace the command with:
+
+       makeindex.exe %.idx -s lib/std.ist|pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex|cp %.idx %.idx.bak|rm %.ilg %.ind %.aux %.synctex.gz
+
+5. Then click *OK*
+
 
 When editing the index with [Texmaker](https://en.wikipedia.org/wiki/Texmaker):
 
